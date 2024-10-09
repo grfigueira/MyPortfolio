@@ -1,0 +1,51 @@
+/* Add this custom CSS to create hover effects */
+.game-card:hover .game-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Icon bar at the bottom of the image */
+.icon-bar {
+    background: rgba(0, 0, 0, 0.7); /* Keep dark for better text visibility */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Game details background */
+.game-details {
+    background-color: #1f2937; /* bg-gray-800, ensures contrast with the text */
+}
+
+/* Text color improvements for contrast */
+.game-card h2 {
+    color: #ec4899; /* Base text-pink-500 for title */
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out; /* Smooth transition for title color change */
+}
+
+/* Hover effect for title text color */
+.game-card:hover h2 {
+    color: #ffe4e6; /* Light whitish-pink for title - ensures high visibility when hovering */
+}
+
+/* General paragraph text */
+.game-card p {
+    color: #e5e7eb; /* text-gray-200 for good readability */
+    margin-bottom: 0.5rem;
+}
+
+.game-card .description {
+    color: #9ca3af; /* text-gray-400 for a slightly lighter description */
+}
+
+/* Change the cursor to a pointer when hovering over the card */
+.game-card {
+    cursor: pointer;
+}
+
+.game-info-box {
+    background-color: #1f2937; /* Tailwind bg-gray-800 */
+    padding: 1.5rem;
+    border-radius: 0.375rem;
+    color: #e5e7eb; /* Improved text contrast */
+}
