@@ -21,6 +21,20 @@
             body {
                 font-family: "Inter", sans-serif !important; /* Force the use of 'Inter' */
             }
+            .tooltip {
+                position: absolute;
+                bottom: 100%; /* Position above the button */
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.75);
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 10px;
+                white-space: nowrap;
+                opacity: 0;
+                transition: opacity 0.2s;
+            }
         </style>
     </head>
 
@@ -34,7 +48,7 @@
                 class="w-40 h-auto rounded-full shadow-lg border-4 border-gray-700 object-cover"
             />
             <div>
-                <h1 class="text-5xl font-bold text-teal-400">
+                <h1 class="text-4xl font-bold text-teal-400">
                     Guilherme Figueira
                 </h1>
                 <p class="text-lg text-gray-300 mt-3 text-center">
@@ -45,9 +59,91 @@
                         Passionate Game Developer ❤️
                     </span>
                 </p>
+                <!-- Buttons Section -->
+                <div class="flex justify-center gap-4 mt-6">
+                    <!-- Resume Button with Tooltip Wrapper -->
+                    <div class="relative inline-block">
+                        <a
+                            href="assets/documents/resume.pdf"
+                            download
+                            class="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full hover:bg-teal-600 transition duration-300 resume-button"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                class="w-6 h-6 mr-1"
+                                style="margin-top: 3px"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 4v12m0 0l-4-4m4 4l4-4"
+                                />
+                            </svg>
+                            Resume
+                        </a>
+                        <!-- Tooltip -->
+                        <div id="tooltip" class="tooltip">
+                            Last updated 08/2024
+                        </div>
+                    </div>
+
+                    <!-- GitHub Button -->
+                    <a
+                        href="https://github.com/yourusername"
+                        target="_blank"
+                        class="flex items-center px-3 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-6 h-6"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M12 0a12 12 0 00-3.793 23.388c.6.111.82-.26.82-.579v-2.252c-3.338.727-4.042-1.609-4.042-1.609-.546-1.386-1.333-1.755-1.333-1.755-1.089-.744.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.774.42-1.305.762-1.605-2.665-.303-5.467-1.334-5.467-5.931 0-1.311.467-2.381 1.236-3.221-.124-.303-.536-1.52.116-3.165 0 0 1.008-.323 3.3 1.23a11.514 11.514 0 016.006 0c2.291-1.553 3.3-1.23 3.3-1.23.652 1.646.24 2.862.116 3.165.77.84 1.236 1.91 1.236 3.221 0 4.61-2.805 5.624-5.477 5.921.433.374.817 1.108.817 2.233v3.311c0 .321.217.695.825.577A12 12 0 0012 0z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </a>
+                    <!-- Itch.io Button -->
+                    <a
+                        href="https://gfigueira.itch.io/"
+                        target="_blank"
+                        class="flex items-center px-3 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300"
+                    >
+                        <img
+                            src="assets/icons/itch-io.png"
+                            alt="Itch.io"
+                            class="w-6 h-6"
+                        />
+                    </a>
+                    <!-- LinkedIn Button -->
+                    <a
+                        href="https://www.linkedin.com/in/yourusername"
+                        target="_blank"
+                        class="flex items-center px-3 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-6 h-6"
+                        >
+                            <path
+                                d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5V5c0-2.761-2.239-5-5-5zm-8.159 19h-3v-8.5h3v8.5zm-1.5-9.7c-.962 0-1.75-.788-1.75-1.75S8.379 6.5 9.341 6.5c.961 0 1.75.788 1.75 1.75s-.789 1.75-1.75 1.75zm9.659 9.7h-3v-4.5c0-1.104-.896-2-2-2s-2 .896-2 2v4.5h-3v-8.5h3v1.073c.878-.691 2.163-1.073 3.5-1.073 2.485 0 4.5 2.015 4.5 4.5v4z"
+                            />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </header>
 
+        <!-- Tooltip -->
         <hr class="my-10 border-t-2 border-gray-500 mx-auto max-w-6xl" />
 
         <main class="container mx-auto p-8">
@@ -98,6 +194,47 @@
                         <p class="text-gray-400 text-sm">
                             A fast-paced FPS game with platforming elements.
                             Inspired by Doom.
+                        </p>
+                    </div>
+                </a>
+                <a
+                    href="projects/tnd.html"
+                    class="block game-card rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer relative"
+                >
+                    <div class="overflow-hidden relative w-full h-64">
+                        <!-- Image -->
+                        <img
+                            src="assets/images/TNDLogo.png"
+                            alt="The Naturals' Descent"
+                            class="game-image w-full h-full transition-transform duration-300 ease-in-out object-cover absolute inset-0"
+                        />
+                        <!-- Video (initially hidden) -->
+                        <video
+                            class="game-video w-full h-full object-cover absolute inset-0 opacity-0 pointer-events-none"
+                            muted
+                            loop
+                        >
+                            <source
+                                src="assets/videos/TND.mp4"
+                                type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                        </video>
+                        <div
+                            class="absolute bottom-0 w-full bg-black bg-opacity-60 text-white text-sm p-2 flex items-center"
+                        >
+                            <span class="mr-2">👥 2</span>
+                            <span class="mr-2">⏱️ 8 Weeks</span>
+                            <span>🔧 Unity (C#)</span>
+                        </div>
+                    </div>
+                    <div class="game-details p-4 bg-gray-800">
+                        <h2 class="text-xl font-bold text-teal-400 mb-1">
+                            The Naturals' Descent (2024)
+                        </h2>
+                        <p class="text-gray-300 mb-2">Gameplay Programmer</p>
+                        <p class="text-gray-400 text-sm">
+                            Action-Adventure puzzle game
                         </p>
                     </div>
                 </a>
@@ -215,11 +352,11 @@
                     Early Days and Game Engines
                 </h3>
                 <p class="text-xl text-gray-300 leading-relaxed mt-2">
-                    I started making games back in 2017, at the age of 15, using
-                    Unreal Engine 4 and YouTube tutorials. After releasing my
-                    first game on Gamejolt, I moved to Unity. Recently, I've
-                    been "dipping my toes" in Unreal Engine 5 (now with C++) in
-                    my free time—it feels like coming home!
+                    I started making games back in 2016, at the age of 14, using
+                    Unreal Engine 4 with blueprints and YouTube tutorials. After
+                    releasing my first game on Gamejolt, I moved to Unity.
+                    Recently, I've been "dipping my toes" in Unreal Engine 5
+                    (now using C++) in my free time—it feels like coming home!
                 </p>
 
                 <!-- Subheading: Dedication and Goals -->
@@ -238,7 +375,7 @@
 
                 <!-- Subheading: My Favorite Games -->
                 <h3 class="text-xl font-semibold text-teal-300 mt-8">
-                    My Favorite Games
+                    Games that inspire me
                 </h3>
                 <p class="text-xl text-gray-300 leading-relaxed mt-2">
                     🪐 <b>Outer Wilds</b> <br />
@@ -311,6 +448,18 @@
                         image.style.opacity = "1"; // Show the image again
                         video.style.opacity = "0"; // Fade out the video smoothly
                     });
+                });
+            });
+            document.addEventListener("DOMContentLoaded", () => {
+                const resumeButton = document.querySelector(".resume-button");
+                const tooltip = document.getElementById("tooltip");
+
+                resumeButton.addEventListener("mouseenter", () => {
+                    tooltip.style.opacity = "1";
+                });
+
+                resumeButton.addEventListener("mouseleave", () => {
+                    tooltip.style.opacity = "0";
                 });
             });
         </script>
