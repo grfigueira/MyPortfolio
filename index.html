@@ -4,9 +4,24 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Guilherme Figueira - Game Programmer</title>
-        <link rel="stylesheet" href="css/styles.css" />
+        <!-- Import Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Import Tailwind CSS -->
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="//unpkg.com/alpinejs" defer></script>
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <style>
+            body {
+                font-family: "Inter", sans-serif !important; /* Force the use of 'Inter' */
+            }
+        </style>
     </head>
 
     <body class="bg-gray-900 text-white font-sans">
@@ -19,7 +34,7 @@
                 class="w-40 h-auto rounded-full shadow-lg border-4 border-gray-700 object-cover"
             />
             <div>
-                <h1 class="text-4xl font-bold text-teal-400">
+                <h1 class="text-5xl font-bold text-teal-400">
                     Guilherme Figueira
                 </h1>
                 <p class="text-lg text-gray-300 mt-3 text-center">
@@ -33,12 +48,12 @@
             </div>
         </header>
 
-        <hr class="my-8 border-t-2 border-gray-500 mx-auto max-w-6xl" />
+        <hr class="my-10 border-t-2 border-gray-500 mx-auto max-w-6xl" />
 
         <main class="container mx-auto p-8">
             <!-- Game Portfolio Section -->
             <h2 class="text-3xl font-bold text-teal-400 mb-8 text-left">
-                My Game Creation Portfolio
+                My Game Development Portfolio
             </h2>
             <section
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
@@ -94,15 +109,19 @@
                     Education
                 </h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <a
+                        href="https://www.fct.unl.pt/en"
+                        target="_blank"
+                        class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+                    >
                         <h3 class="text-2xl text-teal-400 font-bold mb-4">
-                            Nova School of Science and Techonology (2020-2025)
+                            Nova School of Science and Technology (2020-2025)
                         </h3>
                         <p>
                             Integrated Masters in Computer Science and
                             Engineering.
                         </p>
-                    </div>
+                    </a>
                 </div>
             </section>
 
@@ -150,41 +169,110 @@
                     >
                     <span
                         class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
+                        >Blender</span
+                    >
+                    <span
+                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
                         >Web Development</span
+                    >
+                    <span
+                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
+                        >Adobe Photoshop</span
+                    >
+                    <span
+                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
+                        >Adobe Premiere</span
                     >
                 </div>
             </section>
 
+            <hr
+                class="mt-10 mb-10 border-t-2 border-gray-500 mx-auto max-w-6xl"
+            />
+
             <!-- Biography Section -->
             <section class="mb-16">
                 <h2 class="text-3xl font-bold text-teal-400 mb-8 text-left">
-                    Hi, I'm Guilherme
+                    Hi, I'm Guilherme!
                 </h2>
-                <p class="text-xl text-gray-300 leading-relaxed">
+
+                <!-- Subheading: My Journey into Game Development -->
+                <h3 class="text-xl font-semibold text-teal-300 mt-8">
+                    My Journey in Game Development
+                </h3>
+                <p class="text-xl text-gray-300 leading-relaxed mt-2">
                     I'm a 22-year-old university student who has been passionate
-                    about video games for as long as I can remember. I believe
-                    video games should serve as an artistic expression first and
-                    foremost, rather than just a way to "make a quick buck."
+                    about video games for as long as I can remember. <br />
+                    I believe video games should serve as an
+                    <b>artistic expression</b> first and foremost, rather than
+                    just a way to "make a quick buck".
                 </p>
-                <p class="text-xl text-gray-300 leading-relaxed mt-4">
+
+                <!-- Callout Section: Core Belief -->
+
+                <!-- Subheading: Early Days and Game Engines -->
+                <h3 class="text-xl font-semibold text-teal-300 mt-8">
+                    Early Days and Game Engines
+                </h3>
+                <p class="text-xl text-gray-300 leading-relaxed mt-2">
                     I started making games back in 2017, at the age of 15, using
-                    the Unreal Engine 4 and tutorials on YouTube. After
-                    releasing my first game on Gamejolt, I moved to Unity, but
-                    recently, I've been "dipping my toes" in the Unreal Engine
-                    5—it feels like coming home!
+                    Unreal Engine 4 and YouTube tutorials. After releasing my
+                    first game on Gamejolt, I moved to Unity. Recently, I've
+                    been "dipping my toes" in Unreal Engine 5 (now with C++) in
+                    my free time—it feels like coming home!
                 </p>
-                <p class="text-xl text-gray-300 leading-relaxed mt-4">
+
+                <!-- Subheading: Dedication and Goals -->
+                <h3 class="text-xl font-semibold text-teal-300 mt-8">
+                    Dedication and Goals
+                </h3>
+                <p class="text-xl text-gray-300 leading-relaxed mt-2">
                     I'm a dedicated learner and someone who can get the job
-                    done, regardless of the task. I’m determined to use my
-                    software engineering skills to help game designers bring
-                    their visions to life and create awesome (and performant!)
-                    games.
+                    done, regardless of the task. I try my best to keep up with
+                    current industry standards and practices and I’m determined
+                    to use my
+                    <b>software engineering skills</b> to help game designers
+                    bring their visions to life and create awesome (and
+                    performant!) games.
                 </p>
-                <p class="text-xl text-gray-300 leading-relaxed mt-4">
-                    If you’d like to connect or learn more about my jorney, feel
-                    free to check out my resume or reach out through my social
-                    media links.
+
+                <!-- Subheading: My Favorite Games -->
+                <h3 class="text-xl font-semibold text-teal-300 mt-8">
+                    My Favorite Games
+                </h3>
+                <p class="text-xl text-gray-300 leading-relaxed mt-2">
+                    🪐 <b>Outer Wilds</b> <br />
+                    🗡️ <b>The Legend of Zelda: Breath of The Wild</b> <br />
+                    ☢️ <b>The entire Half-Life series</b> <br />
+                    🏴‍☠️ <b>Uncharted 4: A Thief's End</b> <br />
+                    🌀 <b>Psychonauts 2</b>
                 </p>
+                <p class="text-sm text-gray-500 leading-relaxed mt-1 italic">
+                    Trying my best to ignore nostalgia :P
+                </p>
+
+                <!-- Subheading: Get in Touch -->
+                <h3 class="text-xl font-semibold text-teal-300 mt-8">
+                    Get in Touch
+                </h3>
+                <p class="text-xl text-gray-300 leading-relaxed mt-2">
+                    Please feel free to check out my resume and reach out
+                    through my social media links if you want to chat!
+                </p>
+
+                <a
+                    href="https://www.youtube.com/watch?v=UPYYHTjw-fY"
+                    target="_blank"
+                >
+                    <div
+                        class="p-4 mt-8 mb-8 bg-teal-900 bg-opacity-30 rounded-md cursor-pointer"
+                    >
+                        <p class="text-xl font-bold text-teal-300 text-center">
+                            "Video games are an artistic expression first and
+                            foremost."
+                        </p>
+                    </div>
+                </a>
             </section>
         </main>
 
