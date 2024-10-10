@@ -1,467 +1,353 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Guilherme Figueira - Game Programmer</title>
-        <!-- Import Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
 
-        <!-- Import Tailwind CSS -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="//unpkg.com/alpinejs" defer></script>
-        <link rel="stylesheet" href="css/styles.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guilherme Figueira - Game Programmer</title>
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 
-        <style>
-            body {
-                font-family: "Inter", sans-serif !important; /* Force the use of 'Inter' */
-            }
-            .tooltip {
-                position: absolute;
-                bottom: 100%; /* Position above the button */
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: rgba(0, 0, 0, 0.75);
-                color: white;
-                padding: 4px 8px;
-                border-radius: 4px;
-                font-size: 10px;
-                white-space: nowrap;
-                opacity: 0;
-                transition: opacity 0.2s;
-            }
-        </style>
-    </head>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="css/styles.css" />
 
-    <body class="bg-gray-900 text-white font-sans">
-        <header
-            class="text-center p-8 flex flex-col md:flex-row items-center justify-center gap-8"
-        >
-            <img
-                src="assets/images/profile.png"
-                alt="Guilherme Figueira"
-                class="w-40 h-auto rounded-full shadow-lg border-4 border-gray-700 object-cover"
-            />
-            <div>
-                <h1 class="text-4xl font-bold text-teal-400">
-                    Guilherme Figueira
-                </h1>
-                <p class="text-lg text-gray-300 mt-3 text-center">
-                    <span class="font-normal text-gray-300 block">
-                        MSc in Computer Science and Engineering
-                    </span>
-                    <span class="text-gray-300 block mt-2">
-                        Passionate Game Developer ❤️
-                    </span>
-                </p>
-                <!-- Buttons Section -->
-                <div class="flex justify-center gap-4 mt-6">
-                    <!-- Resume Button with Tooltip Wrapper -->
-                    <div class="relative inline-block">
-                        <a
-                            href="assets/documents/resume.pdf"
-                            download
-                            class="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full hover:bg-teal-600 transition duration-300 resume-button"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                class="w-6 h-6 mr-1"
-                                style="margin-top: 3px"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M12 4v12m0 0l-4-4m4 4l4-4"
-                                />
-                            </svg>
-                            Resume
-                        </a>
-                        <!-- Tooltip -->
-                        <div id="tooltip" class="tooltip">
-                            Last updated 08/2024
-                        </div>
+    <style>
+        body {
+            font-family: "Inter", sans-serif !important;
+            /* Force the use of 'Inter' */
+        }
+
+        .tooltip {
+            position: absolute;
+            bottom: 100%;
+            /* Position above the button */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+    <header class="text-center p-8 flex flex-col md:flex-row items-center justify-center gap-8">
+        <img src="assets/images/profile.png" alt="Guilherme Figueira"
+            class="w-40 h-auto rounded-full shadow-lg border-4 border-gray-700 object-cover" />
+        <div>
+            <h1 class="text-4xl font-bold text-teal-400">
+                Guilherme Figueira
+            </h1>
+            <p class="text-lg text-gray-300 mt-3 text-center">
+                <span class="font-normal text-gray-300 block">
+                    MSc in Computer Science and Engineering
+                </span>
+                <span class="text-gray-300 block mt-2">
+                    Passionate Game Developer ❤️
+                </span>
+            </p>
+            <!-- Buttons Section -->
+            <div class="flex justify-center gap-4 mt-6">
+                <!-- Resume Button with Tooltip Wrapper -->
+                <div class="relative inline-block">
+                    <a href="assets/documents/resume.pdf" download
+                        class="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full hover:bg-teal-600 transition duration-300 resume-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-6 h-6 mr-1" style="margin-top: 3px">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4v12m0 0l-4-4m4 4l4-4" />
+                        </svg>
+                        Resume
+                    </a>
+                    <!-- Tooltip -->
+                    <div id="tooltip" class="tooltip">
+                        Last updated 08/2024
                     </div>
-
-                    <!-- GitHub Button -->
-                    <a
-                        href="https://github.com/yourusername"
-                        target="_blank"
-                        class="flex items-center px-3 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="w-6 h-6"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                d="M12 0a12 12 0 00-3.793 23.388c.6.111.82-.26.82-.579v-2.252c-3.338.727-4.042-1.609-4.042-1.609-.546-1.386-1.333-1.755-1.333-1.755-1.089-.744.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.774.42-1.305.762-1.605-2.665-.303-5.467-1.334-5.467-5.931 0-1.311.467-2.381 1.236-3.221-.124-.303-.536-1.52.116-3.165 0 0 1.008-.323 3.3 1.23a11.514 11.514 0 016.006 0c2.291-1.553 3.3-1.23 3.3-1.23.652 1.646.24 2.862.116 3.165.77.84 1.236 1.91 1.236 3.221 0 4.61-2.805 5.624-5.477 5.921.433.374.817 1.108.817 2.233v3.311c0 .321.217.695.825.577A12 12 0 0012 0z"
-                                clip-rule="evenodd"
-                            />
-                        </svg>
-                    </a>
-                    <!-- Itch.io Button -->
-                    <a
-                        href="https://gfigueira.itch.io/"
-                        target="_blank"
-                        class="flex items-center px-3 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300"
-                    >
-                        <img
-                            src="assets/icons/itch-io.png"
-                            alt="Itch.io"
-                            class="w-6 h-6"
-                        />
-                    </a>
-                    <!-- LinkedIn Button -->
-                    <a
-                        href="https://www.linkedin.com/in/yourusername"
-                        target="_blank"
-                        class="flex items-center px-3 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="w-6 h-6"
-                        >
-                            <path
-                                d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5V5c0-2.761-2.239-5-5-5zm-8.159 19h-3v-8.5h3v8.5zm-1.5-9.7c-.962 0-1.75-.788-1.75-1.75S8.379 6.5 9.341 6.5c.961 0 1.75.788 1.75 1.75s-.789 1.75-1.75 1.75zm9.659 9.7h-3v-4.5c0-1.104-.896-2-2-2s-2 .896-2 2v4.5h-3v-8.5h3v1.073c.878-.691 2.163-1.073 3.5-1.073 2.485 0 4.5 2.015 4.5 4.5v4z"
-                            />
-                        </svg>
-                    </a>
                 </div>
+                <!-- LinkedIn Button -->
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank"
+                    class="flex items-center px-3 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M22.23 0H1.77C.79 0 0 .77 0 1.74v20.52C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.74V1.74C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9.03h3.56v11.42zm-1.78-13a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM20.45 20.45h-3.57v-5.74c0-1.36-.03-3.1-1.89-3.1-1.89 0-2.18 1.48-2.18 3v5.84h-3.56V9.03h3.42v1.56h.05c.48-.91 1.65-1.87 3.4-1.87 3.63 0 4.3 2.39 4.3 5.5v6.24z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <!-- GitHub Button -->
+                <a href="https://github.com/yourusername" target="_blank"
+                    class="flex items-center px-3 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M12 0a12 12 0 00-3.793 23.388c.6.111.82-.26.82-.579v-2.252c-3.338.727-4.042-1.609-4.042-1.609-.546-1.386-1.333-1.755-1.333-1.755-1.089-.744.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.774.42-1.305.762-1.605-2.665-.303-5.467-1.334-5.467-5.931 0-1.311.467-2.381 1.236-3.221-.124-.303-.536-1.52.116-3.165 0 0 1.008-.323 3.3 1.23a11.514 11.514 0 016.006 0c2.291-1.553 3.3-1.23 3.3-1.23.652 1.646.24 2.862.116 3.165.77.84 1.236 1.91 1.236 3.221 0 4.61-2.805 5.624-5.477 5.921.433.374.817 1.108.817 2.233v3.311c0 .321.217.695.825.577A12 12 0 0012 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <!-- Itch.io Button -->
+                <a href="https://gfigueira.itch.io/" target="_blank"
+                    class="flex items-center px-3 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300">
+                    <img src="assets/icons/itchdotio.svg" alt="Itch.io" class="w-6 h-6" />
+                </a>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- Tooltip -->
-        <hr class="my-10 border-t-2 border-gray-500 mx-auto max-w-6xl" />
+    <!-- Tooltip -->
+    <hr class="my-10 border-t-2 border-gray-500 mx-auto max-w-6xl" />
 
-        <main class="container mx-auto p-8">
-            <!-- Game Portfolio Section -->
-            <h2 class="text-3xl font-bold text-teal-400 mb-8 text-left">
-                My Game Development Portfolio
-            </h2>
-            <section
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-            >
-                <!-- Game Card Example -->
-                <a
-                    href="projects/forlorn.html"
-                    class="block game-card rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer relative"
-                >
-                    <div class="overflow-hidden relative w-full h-64">
-                        <!-- Image -->
-                        <img
-                            src="assets/images/forlorn.png"
-                            alt="Forlorn"
-                            class="game-image w-full h-full transition-transform duration-300 ease-in-out object-cover absolute inset-0"
-                        />
-                        <!-- Video (initially hidden) -->
-                        <video
-                            class="game-video w-full h-full object-cover absolute inset-0 opacity-0 pointer-events-none"
-                            muted
-                            loop
-                        >
-                            <source
-                                src="assets/videos/forlorn.mp4"
-                                type="video/mp4"
-                            />
-                            Your browser does not support the video tag.
-                        </video>
-                        <div
-                            class="absolute bottom-0 w-full bg-black bg-opacity-60 text-white text-sm p-2 flex items-center"
-                        >
-                            <span class="mr-2">👥 1</span>
-                            <span class="mr-2">⏱️ 2.5 Weeks</span>
-                            <span>🔧 Unity (C#)</span>
-                        </div>
-                    </div>
-                    <div class="game-details p-4 bg-gray-800">
-                        <h2 class="text-xl font-bold text-teal-400 mb-1">
-                            Forlorn (2024)
-                        </h2>
-                        <p class="text-gray-300 mb-2">Gameplay Programmer</p>
-                        <p class="text-gray-400 text-sm">
-                            A fast-paced FPS game with platforming elements.
-                            Inspired by Doom.
-                        </p>
-                    </div>
-                </a>
-                <a
-                    href="projects/tnd.html"
-                    class="block game-card rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer relative"
-                >
-                    <div class="overflow-hidden relative w-full h-64">
-                        <!-- Image -->
-                        <img
-                            src="assets/images/TNDLogo.png"
-                            alt="The Naturals' Descent"
-                            class="game-image w-full h-full transition-transform duration-300 ease-in-out object-cover absolute inset-0"
-                        />
-                        <!-- Video (initially hidden) -->
-                        <video
-                            class="game-video w-full h-full object-cover absolute inset-0 opacity-0 pointer-events-none"
-                            muted
-                            loop
-                        >
-                            <source
-                                src="assets/videos/TND.mp4"
-                                type="video/mp4"
-                            />
-                            Your browser does not support the video tag.
-                        </video>
-                        <div
-                            class="absolute bottom-0 w-full bg-black bg-opacity-60 text-white text-sm p-2 flex items-center"
-                        >
-                            <span class="mr-2">👥 2</span>
-                            <span class="mr-2">⏱️ 8 Weeks</span>
-                            <span>🔧 Unity (C#)</span>
-                        </div>
-                    </div>
-                    <div class="game-details p-4 bg-gray-800">
-                        <h2 class="text-xl font-bold text-teal-400 mb-1">
-                            The Naturals' Descent (2024)
-                        </h2>
-                        <p class="text-gray-300 mb-2">Gameplay Programmer</p>
-                        <p class="text-gray-400 text-sm">
-                            Action-Adventure puzzle game
-                        </p>
-                    </div>
-                </a>
-            </section>
-
-            <!-- Education Section -->
-            <section class="mb-16">
-                <h2 class="text-3xl font-bold text-teal-400 mb-8 text-left">
-                    Education
-                </h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <a
-                        href="https://www.fct.unl.pt/en"
-                        target="_blank"
-                        class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer"
-                    >
-                        <h3 class="text-2xl text-teal-400 font-bold mb-4">
-                            Nova School of Science and Technology (2020-2025)
-                        </h3>
-                        <p>
-                            Integrated Masters in Computer Science and
-                            Engineering.
-                        </p>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Technical Experience Section -->
-            <section class="mb-16">
-                <h2 class="text-3xl font-bold text-teal-400 mb-8 text-left">
-                    Technical Experience (in order of relevance)
-                </h2>
-                <div class="flex flex-wrap gap-4">
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >C#</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >C++</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >Unity</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >Unreal Engine</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >XR Development</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >GLSL</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >Java</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >Go</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >Python</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >Blender</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >Web Development</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >Adobe Photoshop</span
-                    >
-                    <span
-                        class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md"
-                        >Adobe Premiere</span
-                    >
-                </div>
-            </section>
-
-            <hr
-                class="mt-10 mb-10 border-t-2 border-gray-500 mx-auto max-w-6xl"
-            />
-
-            <!-- Biography Section -->
-            <section class="mb-16">
-                <h2 class="text-3xl font-bold text-teal-400 mb-8 text-left">
-                    Hi, I'm Guilherme!
-                </h2>
-
-                <!-- Subheading: My Journey into Game Development -->
-                <h3 class="text-xl font-semibold text-teal-300 mt-8">
-                    My Journey in Game Development
-                </h3>
-                <p class="text-xl text-gray-300 leading-relaxed mt-2">
-                    I'm a 22-year-old university student who has been passionate
-                    about video games for as long as I can remember. <br />
-                    I believe video games should serve as an
-                    <b>artistic expression</b> first and foremost, rather than
-                    just a way to "make a quick buck".
-                </p>
-
-                <!-- Callout Section: Core Belief -->
-
-                <!-- Subheading: Early Days and Game Engines -->
-                <h3 class="text-xl font-semibold text-teal-300 mt-8">
-                    Early Days and Game Engines
-                </h3>
-                <p class="text-xl text-gray-300 leading-relaxed mt-2">
-                    I started making games back in 2016, at the age of 14, using
-                    Unreal Engine 4 with blueprints and YouTube tutorials. After
-                    releasing my first game on Gamejolt, I moved to Unity.
-                    Recently, I've been "dipping my toes" in Unreal Engine 5
-                    (now using C++) in my free time—it feels like coming home!
-                </p>
-
-                <!-- Subheading: Dedication and Goals -->
-                <h3 class="text-xl font-semibold text-teal-300 mt-8">
-                    Dedication and Goals
-                </h3>
-                <p class="text-xl text-gray-300 leading-relaxed mt-2">
-                    I'm a dedicated learner and someone who can get the job
-                    done, regardless of the task. I try my best to keep up with
-                    current industry standards and practices and I’m determined
-                    to use my
-                    <b>software engineering skills</b> to help game designers
-                    bring their visions to life and create awesome (and
-                    performant!) games.
-                </p>
-
-                <!-- Subheading: My Favorite Games -->
-                <h3 class="text-xl font-semibold text-teal-300 mt-8">
-                    Games that inspire me
-                </h3>
-                <p class="text-xl text-gray-300 leading-relaxed mt-2">
-                    🪐 <b>Outer Wilds</b> <br />
-                    🗡️ <b>The Legend of Zelda: Breath of The Wild</b> <br />
-                    ☢️ <b>The entire Half-Life series</b> <br />
-                    🏴‍☠️ <b>Uncharted 4: A Thief's End</b> <br />
-                    🌀 <b>Psychonauts 2</b>
-                </p>
-                <p class="text-sm text-gray-500 leading-relaxed mt-1 italic">
-                    Trying my best to ignore nostalgia :P
-                </p>
-
-                <!-- Subheading: Get in Touch -->
-                <h3 class="text-xl font-semibold text-teal-300 mt-8">
-                    Get in Touch
-                </h3>
-                <p class="text-xl text-gray-300 leading-relaxed mt-2">
-                    Please feel free to check out my resume and reach out
-                    through my social media links if you want to chat!
-                </p>
-
-                <a
-                    href="https://www.youtube.com/watch?v=UPYYHTjw-fY"
-                    target="_blank"
-                >
+    <main class="container mx-auto p-8">
+        <!-- Game Portfolio Section -->
+        <h2 class="text-3xl font-bold text-teal-400 mb-8 text-left">
+            My Game Development Portfolio
+        </h2>
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Forlorn Game Card -->
+            <a href="projects/forlorn.html"
+                class="flex flex-col justify-between game-card rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer relative bg-gray-800"
+                style="min-height: 400px;">
+                <div class="overflow-hidden relative w-full h-64">
+                    <!-- Image -->
+                    <img src="assets/images/forlorn.png" alt="Forlorn"
+                        class="game-image w-full h-full transition-transform duration-300 ease-in-out object-cover absolute inset-0" />
+                    <!-- Video (initially hidden) -->
+                    <video class="game-video w-full h-full object-cover absolute inset-0 opacity-0 pointer-events-none"
+                        muted loop>
+                        <source src="assets/videos/forlorn.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
                     <div
-                        class="p-4 mt-8 mb-8 bg-teal-900 bg-opacity-30 rounded-md cursor-pointer"
-                    >
-                        <p class="text-xl font-bold text-teal-300 text-center">
-                            "Video games are an artistic expression first and
-                            foremost."
-                        </p>
+                        class="absolute bottom-0 w-full bg-black bg-opacity-60 text-white text-sm p-2 flex items-center">
+                        <span class="mr-2">👥 1</span>
+                        <span class="mr-2">⏱️ 2.5 Weeks</span>
+                        <span>🔧 Unity (C#)</span>
                     </div>
+                </div>
+                <div class="game-details p-4 bg-gray-800">
+                    <h2 class="text-xl font-bold text-teal-400 mb-1">
+                        Forlorn (2024)
+                    </h2>
+                    <p class="text-gray-300 mb-2">Gameplay Programmer</p>
+                    <p class="text-gray-400 text-sm">
+                        A fast-paced FPS game with platforming elements.
+                        Inspired by Doom.
+                    </p>
+                </div>
+            </a>
+            <!-- The Naturals' Descent Game Card -->
+            <a href="projects/tnd.html"
+                class="flex flex-col justify-between game-card rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer relative bg-gray-800"
+                style="min-height: 400px;">
+                <div class="overflow-hidden relative w-full h-64">
+                    <!-- Image -->
+                    <img src="assets/images/TNDLogo.png" alt="The Naturals' Descent"
+                        class="game-image w-full h-full transition-transform duration-300 ease-in-out object-cover absolute inset-0" />
+                    <!-- Video (initially hidden) -->
+                    <video class="game-video w-full h-full object-cover absolute inset-0 opacity-0 pointer-events-none"
+                        muted loop>
+                        <source src="assets/videos/TND.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <div
+                        class="absolute bottom-0 w-full bg-black bg-opacity-60 text-white text-sm p-2 flex items-center">
+                        <span class="mr-2">👥 2</span>
+                        <span class="mr-2">⏱️ 8 Weeks</span>
+                        <span>🔧 Unity (C#)</span>
+                    </div>
+                </div>
+                <div class="game-details p-4 bg-gray-800">
+                    <h2 class="text-xl font-bold text-teal-400 mb-1">
+                        The Naturals' Descent (2024)
+                    </h2>
+                    <p class="text-gray-300 mb-2">Gameplay Programmer</p>
+                    <p class="text-gray-400 text-sm">
+                        Action-Adventure puzzle game
+                    </p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Education Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-teal-400 mb-8 text-left">
+                Education
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="https://www.fct.unl.pt/en" target="_blank"
+                    class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+                    <h3 class="text-2xl text-teal-400 font-bold mb-4">
+                        Nova School of Science and Technology (2020-2025)
+                    </h3>
+                    <p>
+                        Integrated Masters in Computer Science and
+                        Engineering.
+                    </p>
                 </a>
-            </section>
-        </main>
+            </div>
+        </section>
 
-        <footer class="text-center p-8 mt-16 text-gray-500">
-            &copy; 2024 Guilherme Figueira
-        </footer>
+        <!-- Technical Experience Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-teal-400 mb-8 text-left">
+                Technical Experience (in order of relevance)
+            </h2>
+            <div class="flex flex-wrap gap-4">
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">C#</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">C++</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">Unity</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">Unreal Engine</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">XR Development</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">GLSL</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">Java</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">Go</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">Python</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">Blender</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">Web Development</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">Adobe Photoshop</span>
+                <span class="bg-gray-800 text-teal-400 px-4 py-2 rounded-lg shadow-md">Adobe Premiere</span>
+            </div>
+        </section>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const gameCards = document.querySelectorAll(".game-card");
+        <hr class="mt-10 mb-10 border-t-2 border-gray-500 mx-auto max-w-6xl" />
 
-                gameCards.forEach((card) => {
-                    const image = card.querySelector(".game-image");
-                    const video = card.querySelector(".game-video");
+        <!-- Biography Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-teal-400 mb-8 text-left">
+                Hi, I'm Guilherme!
+            </h2>
 
-                    let hoverTimeout;
+            <!-- Subheading: My Journey into Game Development -->
+            <h3 class="text-xl font-semibold text-teal-300 mt-8">
+                My Journey in Game Development
+            </h3>
+            <p class="text-xl text-gray-300 leading-relaxed mt-2">
+                I'm a 22-year-old university student who has been passionate
+                about video games for as long as I can remember. <br />
+                I believe video games should serve as an
+                <b>artistic expression</b> first and foremost, rather than
+                just a way to "make a quick buck".
+            </p>
 
-                    card.addEventListener("mouseenter", () => {
-                        // Zoom the image
-                        image.style.transform = "scale(1.05)";
+            <!-- Callout Section: Core Belief -->
 
-                        // Set a timeout to show the video after 1 second
-                        hoverTimeout = setTimeout(() => {
-                            image.style.opacity = "0"; // Hide the image smoothly
-                            video.style.opacity = "1"; // Fade in the video smoothly
-                            video.play();
-                        }, 540);
-                    });
+            <!-- Subheading: Early Days and Game Engines -->
+            <h3 class="text-xl font-semibold text-teal-300 mt-8">
+                Early Days and Game Engines
+            </h3>
+            <p class="text-xl text-gray-300 leading-relaxed mt-2">
+                I started making games back in 2016, at the age of 14, using
+                Unreal Engine 4 with blueprints and YouTube tutorials. After
+                releasing my first game on Gamejolt, I moved to Unity.
+                Recently, I've been "dipping my toes" in Unreal Engine 5
+                (now using C++) in my free time—it feels like coming home!
+            </p>
 
-                    card.addEventListener("mouseleave", () => {
-                        // Reset the zoom and stop the video
-                        image.style.transform = "scale(1)";
-                        clearTimeout(hoverTimeout);
-                        video.pause();
-                        video.currentTime = 0; // Reset video to the start
-                        image.style.opacity = "1"; // Show the image again
-                        video.style.opacity = "0"; // Fade out the video smoothly
-                    });
+            <!-- Subheading: Dedication and Goals -->
+            <h3 class="text-xl font-semibold text-teal-300 mt-8">
+                Dedication and Goals
+            </h3>
+            <p class="text-xl text-gray-300 leading-relaxed mt-2">
+                I'm a dedicated learner and someone who can get the job
+                done, regardless of the task. I try my best to keep up with
+                current industry standards and practices and I’m determined
+                to use my
+                <b>software engineering skills</b> to help game designers
+                bring their visions to life and create awesome (and
+                performant!) games.
+            </p>
+
+            <!-- Subheading: My Favorite Games -->
+            <h3 class="text-xl font-semibold text-teal-300 mt-8">
+                Games that inspire me
+            </h3>
+            <p class="text-xl text-gray-300 leading-relaxed mt-2">
+                🪐 <b>Outer Wilds</b> <br />
+                🗡️ <b>The Legend of Zelda: Breath of The Wild</b> <br />
+                ☢️ <b>The entire Half-Life series</b> <br />
+                🏴‍☠️ <b>Uncharted 4: A Thief's End</b> <br />
+                🌀 <b>Psychonauts 2</b>
+            </p>
+            <p class="text-sm text-gray-500 leading-relaxed mt-1 italic">
+                Trying my best to ignore nostalgia :P
+            </p>
+
+            <!-- Subheading: Get in Touch -->
+            <h3 class="text-xl font-semibold text-teal-300 mt-8">
+                Get in Touch
+            </h3>
+            <p class="text-xl text-gray-300 leading-relaxed mt-2">
+                Please feel free to check out my resume and reach out
+                through my social media links if you want to chat!
+            </p>
+
+            <a href="https://www.youtube.com/watch?v=UPYYHTjw-fY" target="_blank">
+                <div class="p-4 mt-8 mb-8 bg-teal-900 bg-opacity-30 rounded-md cursor-pointer">
+                    <p class="text-xl font-bold text-teal-300 text-center">
+                        "Video games are an artistic expression first and
+                        foremost."
+                    </p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer class="text-center p-8 mt-16 text-gray-500">
+        &copy; 2024 Guilherme Figueira
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const gameCards = document.querySelectorAll(".game-card");
+
+            gameCards.forEach((card) => {
+                const image = card.querySelector(".game-image");
+                const video = card.querySelector(".game-video");
+
+                let hoverTimeout;
+
+                card.addEventListener("mouseenter", () => {
+                    // Zoom the image
+                    image.style.transform = "scale(1.05)";
+
+                    // Set a timeout to show the video after 1 second
+                    hoverTimeout = setTimeout(() => {
+                        image.style.opacity = "0"; // Hide the image smoothly
+                        video.style.opacity = "1"; // Fade in the video smoothly
+                        video.play();
+                    }, 540);
+                });
+
+                card.addEventListener("mouseleave", () => {
+                    // Reset the zoom and stop the video
+                    image.style.transform = "scale(1)";
+                    clearTimeout(hoverTimeout);
+                    video.pause();
+                    video.currentTime = 0; // Reset video to the start
+                    image.style.opacity = "1"; // Show the image again
+                    video.style.opacity = "0"; // Fade out the video smoothly
                 });
             });
-            document.addEventListener("DOMContentLoaded", () => {
-                const resumeButton = document.querySelector(".resume-button");
-                const tooltip = document.getElementById("tooltip");
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            const resumeButton = document.querySelector(".resume-button");
+            const tooltip = document.getElementById("tooltip");
 
-                resumeButton.addEventListener("mouseenter", () => {
-                    tooltip.style.opacity = "1";
-                });
-
-                resumeButton.addEventListener("mouseleave", () => {
-                    tooltip.style.opacity = "0";
-                });
+            resumeButton.addEventListener("mouseenter", () => {
+                tooltip.style.opacity = "1";
             });
-        </script>
-    </body>
+
+            resumeButton.addEventListener("mouseleave", () => {
+                tooltip.style.opacity = "0";
+            });
+        });
+    </script>
+</body>
+
 </html>
