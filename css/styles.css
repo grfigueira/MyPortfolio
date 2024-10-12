@@ -52,3 +52,14 @@
 .game-card:hover .game-image {
     transform: scale(1.05);
 }
+
+/* Add a fade-in transition for the video */
+.game-video {
+    opacity: 0; /* Start with the video being invisible */
+    transition: opacity 0.5s ease-in-out; /* Smoothly fade in/out the video */
+}
+
+/* Game card hover adjustments for video */
+.game-card:hover .game-video {
+    opacity: 1; /* Set the opacity to 1 when hovered to fade in */
+}
