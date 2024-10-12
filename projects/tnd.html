@@ -36,6 +36,49 @@
             color: #f472b6;
             /* Slightly lighter pink on hover */
         }
+        /* Spinner styling */
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #ffffff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .video-container {
+            position: relative;
+        }
+
+        .loading-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading-container.hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -63,8 +106,11 @@
 
     <main class="container mx-auto p-8">
         <!-- Game Title and Video Section -->
-        <section class="mb-8 relative max-w-4xl mx-auto">
-            <video autoplay loop muted playsinline class="w-full rounded" id="game-video">
+        <section class="mb-8 relative max-w-4xl mx-auto video-container">
+            <div class="loading-container" id="loading-container-1">
+                <div class="spinner"></div>
+            </div>
+            <video autoplay loop muted playsinline class="w-full rounded" id="game-video-1">
                 <source src="../assets/videos/TND.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -143,8 +189,11 @@
         <!-- Side-by-Side Videos with Captions -->
         <section class="mb-8">
             <div class="grid md:grid-cols-2 gap-4">
-                <div>
-                    <video autoplay loop muted playsinline class="w-full rounded pointer-events-none">
+                <div class="video-container">
+                    <div class="loading-container" id="loading-container-2">
+                        <div class="spinner"></div>
+                    </div>
+                    <video autoplay loop muted playsinline class="w-full rounded pointer-events-none" id="game-video-2">
                         <source src="../assets/videos/TNDHoverBoard.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
@@ -152,8 +201,11 @@
                         Visual demonstration of the hover board physics.
                     </p>
                 </div>
-                <div>
-                    <video autoplay loop muted playsinline class="w-full rounded pointer-events-none">
+                <div class="video-container">
+                    <div class="loading-container" id="loading-container-3">
+                        <div class="spinner"></div>
+                    </div>
+                    <video autoplay loop muted playsinline class="w-full rounded pointer-events-none" id="game-video-3">
                         <source src="../assets/videos/TNDBoardInAction.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
@@ -179,8 +231,12 @@
             </p>
             <section class="mb-8">
                 <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <video autoplay loop muted playsinline class="w-full rounded pointer-events-none">
+                    <!-- First Video with Spinner -->
+                    <div class="video-container">
+                        <div class="loading-container" id="loading-container-4">
+                            <div class="spinner"></div>
+                        </div>
+                        <video autoplay loop muted playsinline class="w-full rounded pointer-events-none" id="game-video-4">
                             <source src="../assets/videos/WFCTiles.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
@@ -188,8 +244,13 @@
                             The 3D meshes used as tiles and assignment of side tags.
                         </p>
                     </div>
-                    <div>
-                        <video autoplay loop muted playsinline class="w-full rounded pointer-events-none">
+            
+                    <!-- Second Video with Spinner -->
+                    <div class="video-container">
+                        <div class="loading-container" id="loading-container-5">
+                            <div class="spinner"></div>
+                        </div>
+                        <video autoplay loop muted playsinline class="w-full rounded pointer-events-none" id="game-video-5">
                             <source src="../assets/videos/WFCVIZU.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
@@ -199,8 +260,9 @@
                     </div>
                 </div>
             </section>
+            
             <section class="mb-8">
-                <h3 class="text-3xl font-bold text-teal-400 mb-4">
+                <h3 class="text-3xl font-bold text-teal-400 mb-4 text-center">
                     Still working on the rest of this page... 🚧
             </section>
         </section>
@@ -210,6 +272,28 @@
     <footer class="text-center p-8 mt-16 text-gray-500">
         &copy; 2024 Guilherme Figueira
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const videos = document.querySelectorAll("video");
+
+            videos.forEach((video, index) => {
+                const loadingContainer = document.getElementById(`loading-container-${index + 1}`);
+
+                // Add 'loadeddata' event listener to the video
+                video.addEventListener("loadeddata", function () {
+                    // Hide the loading spinner once the video is ready
+                    if (loadingContainer) {
+                        loadingContainer.classList.add("hidden");
+                    }
+                });
+
+                // Play video with a fallback if autoplay is blocked
+                video.play().catch(function (error) {
+                    console.log("Autoplay is blocked, or another error occurred: ", error);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
