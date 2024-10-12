@@ -1,57 +1,54 @@
-/* Add this custom CSS to create hover effects */
-.game-card:hover .game-image {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Icon bar at the bottom of the image */
-.icon-bar {
-    background: rgba(0, 0, 0, 0.7); /* Keep dark for better text visibility */
-    transition: background 0.3s ease-in-out;
+/* General game card adjustments */
+.game-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content from the top */
+    height: 100%; /* Set all cards to the same height */
 }
 
 /* Game details background */
 .game-details {
-    background-color: #1f2937; /* bg-gray-800, ensures contrast with the text */
+    background-color: #1f2937; /* bg-gray-800 */
+    padding: 0.75rem; /* Reduced padding for shorter height */
+    flex-grow: 1; /* Allow the game details to grow with the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start all content from the top */
+    margin-top: auto; /* Push the game-details section to the bottom */
 }
 
-/* Text color improvements for contrast */
-.game-card h2 {
+/* Title adjustments for consistent spacing */
+.game-details h2 {
+    margin-bottom: 0.25rem; /* Reduced spacing below the title for more compact layout */
     color: #ec4899; /* Base text-pink-500 for title */
     font-size: 1.25rem;
     font-weight: bold;
     transition: color 0.3s ease-in-out; /* Smooth transition for title color change */
 }
 
-/* Hover effect for title text color */
+/* Text color improvements for contrast */
 .game-card:hover h2 {
     color: #ffe4e6; /* Light whitish-pink for title - ensures high visibility when hovering */
 }
 
-/* General paragraph text */
-.game-card p {
-    color: #e5e7eb; /* text-gray-200 for good readability */
-    margin-bottom: 0.5rem;
+/* Remove bottom margin from last paragraph to align the text properly */
+.game-details p:last-child {
+    margin-bottom: 0; /* Remove bottom margin to keep it tight */
 }
 
-.game-card .description {
-    color: #9ca3af; /* text-gray-400 for a slightly lighter description */
+/* Adjustments for consistent layout across all cards */
+.game-details p {
+    margin-bottom: 0.5rem; /* Slight reduction in spacing between paragraphs for compactness */
 }
 
-/* Change the cursor to a pointer when hovering over the card */
-.game-card {
-    cursor: pointer;
+/* Game image adjustments */
+.game-image {
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    height: 100%; /* Ensure image takes full height within its container */
 }
 
-.game-info-box {
-    background-color: #1f2937; /* Tailwind bg-gray-800 */
-    padding: 1.5rem;
-    border-radius: 0.375rem;
-    color: #e5e7eb; /* Improved text contrast */
-}
-
-/* Add a fade-in transition for the video */
-.game-video {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+/* On hover, zoom in slightly */
+.game-card:hover .game-image {
+    transform: scale(1.05);
 }
