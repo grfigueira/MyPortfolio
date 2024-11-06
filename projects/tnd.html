@@ -107,17 +107,12 @@
 
     <main class="container mx-auto p-8">
         <!-- Game Title and Video Section -->
-        <section class="mb-8 relative max-w-4xl mx-auto video-container">
-            <div class="loading-container" id="loading-container-1">
-                <div class="spinner"></div>
-            </div>
-            <video autoplay loop muted playsinline class="w-full rounded" id="game-video-1">
-                <source src="../assets/videos/TND.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-
-            <div
-                class="absolute bottom-0 w-full bg-gray-800 bg-opacity-70 text-white text-lg p-3 text-left rounded-b-md">
+        <section class="mb-8 relative max-w-4xl mx-auto">
+            <img src="../assets/gifs/TND.gif" 
+                 alt="The Naturals' Descent Gameplay" 
+                 class="w-full rounded"
+                 loading="lazy">
+            <div class="absolute bottom-0 w-full bg-gray-800 bg-opacity-70 text-white text-lg p-3 text-left rounded-b-md">
                 <h2 class="text-pink-400 text-2xl font-bold">The Naturals' Descent</h2>
             </div>
         </section>
@@ -215,26 +210,20 @@
         <!-- Side-by-Side Videos with Captions -->
         <section class="mb-8">
             <div class="grid md:grid-cols-2 gap-4">
-                <div class="video-container">
-                    <div class="loading-container" id="loading-container-2">
-                        <div class="spinner"></div>
-                    </div>
-                    <video autoplay loop muted playsinline class="w-full rounded pointer-events-none" id="game-video-2">
-                        <source src="../assets/videos/TNDHoverBoard.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                <div>
+                    <img src="../assets/gifs/TNDHoverBoard.gif" 
+                         alt="Hover board physics demonstration" 
+                         class="w-full rounded"
+                         loading="lazy">
                     <p class="text-gray-400 mt-2 text-xl">
                         Visual demonstration of the hover board physics.
                     </p>
                 </div>
-                <div class="video-container">
-                    <div class="loading-container" id="loading-container-3">
-                        <div class="spinner"></div>
-                    </div>
-                    <video autoplay loop muted playsinline class="w-full rounded pointer-events-none" id="game-video-3">
-                        <source src="../assets/videos/TNDBoardInAction.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                <div>
+                    <img src="../assets/gifs/TNDBoardInAction.gif" 
+                         alt="Hover board in action" 
+                         class="w-full rounded"
+                         loading="lazy">
                     <p class="text-gray-400 mt-2 text-xl">
                         Hover board in action, exploring the desert.
                     </p>
@@ -257,31 +246,20 @@
             </p>
             <section class="mb-8">
                 <div class="grid md:grid-cols-2 gap-4">
-                    <!-- First Video with Spinner -->
-                    <div class="video-container">
-                        <div class="loading-container" id="loading-container-4">
-                            <div class="spinner"></div>
-                        </div>
-                        <video autoplay loop muted playsinline class="w-full rounded pointer-events-none"
-                            id="game-video-4">
-                            <source src="../assets/videos/WFCTiles.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                    <div>
+                        <img src="../assets/gifs/WFCTiles.gif" 
+                             alt="Wave Function Collapse tiles" 
+                             class="w-full rounded"
+                             loading="lazy">
                         <p class="text-gray-400 mt-2 text-xl">
                             The 3D meshes used as tiles and assignment of side tags.
                         </p>
                     </div>
-
-                    <!-- Second Video with Spinner -->
-                    <div class="video-container">
-                        <div class="loading-container" id="loading-container-5">
-                            <div class="spinner"></div>
-                        </div>
-                        <video autoplay loop muted playsinline class="w-full rounded pointer-events-none"
-                            id="game-video-5">
-                            <source src="../assets/videos/WFCVIZU.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                    <div>
+                        <img src="../assets/gifs/WFCVIZU.gif" 
+                             alt="Wave Function Collapse visualization" 
+                             class="w-full rounded"
+                             loading="lazy">
                         <p class="text-gray-400 mt-2 text-xl">
                             Visualization of the Wave Function Collapse algorithm in action.
                         </p>
