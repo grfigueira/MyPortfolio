@@ -83,7 +83,7 @@
                 <h3 class="text-2xl text-teal-400 font-bold mb-4">About</h3>
                 <p class="text-xl">
                     This was an experimental project targeting the <b>Meta Quest 3</b>. I wanted to explore the usage of
-                    seamless portals to travel between pass-through reality and a virtual world.
+                    seamless portals to travel between video see-through and a virtual world.
                 </p>
             </div>
             <div class="game-info-box">
@@ -105,15 +105,24 @@
                 Introduction
             </h3>
             <p class="mb-4 text-xl">
-                In this very short project, the player can go through a seamless portal into a cozy vitual campsite
+                In this very short project, the player can go through a seamless portal into a cozy virtual campsite
                 where they can cook and eat marshmallows and watch old cartoons on the TV.
             </p>
             <h3 class="text-3xl font-bold text-teal-400 mb-4">
-                Context and Technology 
+                Technology and Context
             </h3>
             <p class="mb-4 text-xl">
-                The portal is creating using a custom stencil shader that either renders a passthrough material (provided by <b>MetaXR</b> or the virtual world. Although the player can never see it, the portal is actually a 3 dimensional cube with inverted normals which ensures a seamless transition without clipping. Every iteration uses hand tracking only, no controllers are needed.
+                The portal is created using a custom stencil shader that either renders a passthrough material (provided by <b>MetaXR</b>) or the virtual world. Although the player can never see it, the portal is actually a 3 dimensional mesh with inverted normals which ensures a seamless transition without clipping. Every iteration uses hand tracking only, no controllers are needed.
             </p>
+
+            <p class="mb-4 text-xl">
+               The player can open and close the portal by pressing a physics button, cook and eat marshmallows by the campfire, and watch an old cartoon on the TV after turning it on.
+            </p>
+            
+            <h3 class="text-3xl font-bold text-teal-400 mb-4">
+                Conclusion
+            </h3>
+
             <p class="mb-4 text-xl">
                 This very short project was an experimental prototype, part of my masters thesis in mixed reality, to test the capabilities of the <b>Meta Quest 3</b> and the <b>MetaXR</b> toolkit. 
             </p>
@@ -131,7 +140,7 @@
     </main>
 
     <footer class="text-center p-8 mt-16 text-gray-500">
-        &copy; 2024 Guilherme Figueira
+        &copy; <span id="currentYear">2025</span> Guilherme Figueira
     </footer>
 </body>
 

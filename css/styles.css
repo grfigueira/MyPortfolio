@@ -31,6 +31,15 @@
     color: #ffe4e6; /* Light whitish-pink for title - ensures high visibility when hovering */
 }
 
+.highlight-link {
+    color: #ec4899; /* Tailwind text-pink-500 */
+    font-weight: bold;
+}
+
+.highlight-link:hover {
+    color: #f472b6; /* Slightly lighter pink on hover */
+}
+
 /* Remove bottom margin from last paragraph to align the text properly */
 .game-details p:last-child {
     margin-bottom: 0; /* Remove bottom margin to keep it tight */
