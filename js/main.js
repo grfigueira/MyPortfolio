@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const [currentYear, currentMonth, currentDay] = [date.getFullYear(), date.getMonth(), date.getUTCDate()];
 
         // no birthday yet
-        if(currentMonth < birthMonth || (currentMonth + 1 == birthMonth && currentDay < birthDay))
-        {
+        if (currentMonth < birthMonth || (currentMonth + 1 == birthMonth && currentDay < birthDay)) {
             console.log("current year: " + currentYear + " current month: " + currentMonth + " current day: " + currentDay);
             return currentYear - birthYear - 1;
         }
@@ -18,3 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("age").textContent = calculateAge();
     document.getElementById("currentYear").textContent = new Date().getFullYear();
 });
+
+/******************************************************************************
+*                   Logic from Nelson Rodrigues
+*              https://codepen.io/nelsonr/pen/WNQaZPb
+******************************************************************************/
+
